@@ -1,27 +1,22 @@
 var express = require('express'),
     router = express.Router(),
-    home = require('../controllers/home'),
-    blog = require('../controllers/blog'),
-    testimonials = require('../controllers/testimonials'),
-    nutrition = require('../controllers/nutrition'),
-    faq = require('../controllers/faq');
+    user = require('../controllers/user'),
+    admin = require('../controllers/admin');
 
 module.exports = function(app){
    	
-    // home
-	router.get('/', home.index);
+    // render user views
+	router.get('/', user.renderIndex);
+    router.get('/blog', user.renderBlog);
+    router.get('/testimonials', user.renderTestimonials);
+    router.get('/nutrition', user.renderNutrition);
+    router.get('/faq', user.renderFaq);
     
-    // blog
-    router.get('/blog', blog.index);
-
-    // testimonials
-    router.get('/testimonials', testimonials.index);
-    
-    // nutrition
-    router.get('/nutrition', nutrition.index);
-
-    // faq
-    router.get('/faq', faq.index);
-    
+    // render admin views
+    router.get('/admin', admin.renderHome);
+    router.get('/admin-blog-management', admin.renderBlog);
+    router.get('/admin-testimonial-management', admin.renderTestimonials);
+    router.get('/admin-nutrition-management', admin.renderNutrition);
+        
     app.use(router);
 }
