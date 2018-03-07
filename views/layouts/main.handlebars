@@ -1,0 +1,28 @@
+<head>
+    <title>ME2M - {{title}}</title>
+    {{>includes this}}
+</head>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 green-bar"></div>
+    </div>
+</div>
+<div id="wrapper" class="container-fluid">
+    <div class="row">
+        <div id="logo" class="col-sm-6">
+            <div id="logo-main" class="font-effect-vintage">
+                <span class="logo-green">M</span><span class="logo-green right-spacing-shift">E</span><span class="logo-blue logo-small">2</span><span class="logo-green">M</span>
+            </div>
+        </div>
+        <div id="header" class="col-sm-6">
+            {{>nav this}}
+        </div>
+    </div>
+    <body>
+        <div class="row">
+            <div class="col-sm-12">
+                {{body}}
+            </div>
+        </div>
+    </body>
+</div>

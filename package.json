@@ -1,0 +1,12 @@
+{
+  "name": "ME2M",
+  "version": "1.0.0",
+  "description": "Move, Empower, 2 Motivate",
+  "author": "Robert Baxter : Justin Judd",
+  "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+  }
+}
