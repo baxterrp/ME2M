@@ -1,4 +1,5 @@
 var title = "Administrative Panel";
+var testimonial = require('../models').Testimonial;
 
 //ToDo: add admin pages and change what renders here
 module.exports = {
@@ -13,5 +14,19 @@ module.exports = {
     },
     renderNutrition : function(req, res){
         res.render('nutrition', {title: title, admin: true, nutrition: true});
+    },
+    addTestimonial : function(req, res){
+        if(req.body != null){
+            var newTestimonial = new testimonial(JSON.parse(JSON.stringify(req.body)));
+            newTestimonial.save(function(error){
+                if(error){
+                    res.send("error");
+                }else{
+                    res.send("success");
+                }
+            });
+        }else{
+            res.send("error");
+        }
     }
 }

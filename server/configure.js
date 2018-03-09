@@ -8,8 +8,8 @@ var bodyParser = require('body-parser'),
 module.exports = function(app){
 	
     // set up bodyparser	
-	app.use(bodyParser.urlencoded({'extended':true}));
-	app.use(bodyParser.json()); 
+	app.use(bodyParser.urlencoded({'extended':false})); 
+    app.use(bodyParser.json());
     
     // setup sessions
     app.use(session({

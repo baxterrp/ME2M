@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    schema = mongoose.schema;
+    schema = mongoose.Schema;
 
 var testimonialSchema = new schema({
    client: String,

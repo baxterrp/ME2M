@@ -17,6 +17,9 @@ module.exports = function(app){
     router.get('/admin-blog-management', admin.renderBlog);
     router.get('/admin-testimonial-management', admin.renderTestimonials);
     router.get('/admin-nutrition-management', admin.renderNutrition);
+    
+    // admin method posts
+    router.post('/addTestimonial', admin.addTestimonial);
         
     app.use(router);
 }
