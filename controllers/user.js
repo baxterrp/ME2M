@@ -1,3 +1,5 @@
+var testimonial = require('../models').Testimonial;
+
 module.exports = {
     renderIndex : function(req, res){
         res.render('home', {title : "Home Page", home: true});   
@@ -6,7 +8,9 @@ module.exports = {
         res.render('blog', {title: "MEM Blog", blog: true});
     },
     renderTestimonials : function(req, res){
-        res.render('testimonials', {title: "Client Testimonials", clients: true});
+        testimonial.find({}, function(error, results){
+            res.render('testimonials', {testimonials: results, title: "Client Testimonials", clients: true});
+        });
     },
     renderNutrition : function(req, res){
         res.render('nutrition', {title: "Nutrition Tips", nutrition: true});

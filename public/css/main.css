@@ -77,4 +77,8 @@ nav ul li a{
 .short-text{
     width: 50%;
 }
+.error {
+    color: red;
+}
+
 
