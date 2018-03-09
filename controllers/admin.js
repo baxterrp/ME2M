@@ -9,7 +9,7 @@ module.exports = {
         res.render('blog', {title: title, admin: true, blog: true});
     },
     renderTestimonials : function(req, res){
-        res.render('testimonials', {title: title, admin: true, clients: true});
+        res.render('admin_add_testimonial', {title: title, admin: true, clients: true});
     },
     renderNutrition : function(req, res){
         res.render('nutrition', {title: title, admin: true, nutrition: true});
